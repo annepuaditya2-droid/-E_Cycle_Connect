@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f7f2">
+  <meta name="description" content="Give your old electronics a better next chapter. Book a free pickup, follow your e-waste journey, and shop refurbished tech with E-Cycle Connect.">
+  <title>E-Cycle Connect — Good tech deserves another life</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="E-Cycle Connect home">
+        <span class="brand-mark">↻</span>
+        <span>E-Cycle <em>Connect</em></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About us</a>
+        <a href="#book">Book pickup</a>
+        <a href="#track">Track e-waste</a>
+        <a href="#marketplace">Marketplace</a>
+        <a href="#rewards">Rewards</a>
+        <a href="#contact">Contact</a>
+        <a class="admin-nav" id="adminNav" href="#operations">Admin dashboard</a>
+      </nav>
+      <a class="btn nav-cta" href="#book">Book a free pickup <span class="arrow">↗</span></a>
+      <div class="nav-account" id="navAccount">
+        <span class="account-label" id="accountLabel"></span>
+        <button class="btn nav-login" id="authButton" type="button">Sign in</button>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <div class="auth-backdrop" id="authBackdrop" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="auth-card">
+      <button class="auth-close" id="authClose" type="button" aria-label="Close sign in">×</button>
+      <span class="eyebrow">Your E-Cycle account</span>
+      <h2 id="authTitle">Welcome back.</h2>
+      <p>Sign in as a customer to book pickups, or as an admin to manage inspections and item journeys. This is demo-only sign-in, not secure authentication; don't use real passwords.</p>
+      <div class="auth-tabs" role="tablist" aria-label="Choose account type">
+        <button class="auth-tab active" type="button" role="tab" aria-selected="true" data-role="customer">Customer</button>
+        <button class="auth-tab" type="button" role="tab" aria-selected="false" data-role="admin">Admin</button>
+      </div>
+      <form class="auth-form" id="authForm">
+        <div class="field" id="authNameField" hidden><label for="authName">Your name</label><input id="authName" autocomplete="name" placeholder="Your name"></div>
+        <div class="field"><label for="authEmail">Email address</label><input id="authEmail" type="email" autocomplete="username" placeholder="you@example.com" required></div>
+        <div class="field"><label for="authPassword">Password</label><input id="authPassword" type="password" autocomplete="current-password" placeholder="Enter your password" required></div>
+        <div class="auth-error" id="authError" role="status" aria-live="polite"></div>
+        <button class="btn" type="submit" id="authSubmit">Sign in as customer <span class="arrow">→</span></button>
+      </form>
+      <div class="auth-demo" id="authDemo"></div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">A better future for old tech</span>
+            <h1>Good tech deserves <span>another life.</span></h1>
+            <p>We make it easy to pass on, repair, and recycle your electronics. One doorstep pickup can keep valuable materials in use and out of landfill.</p>
+            <div class="hero-actions">
+              <a class="btn" href="#book">Book a free pickup <span class="arrow">↗</span></a>
+              <a class="btn btn-outline" href="#track">Track my e-waste <span class="arrow">→</span></a>
+            </div>
+            <div class="hero-note">
+              <div class="avatar-stack" aria-hidden="true"><span>🌿</span><span>♻️</span><span>💚</span></div>
+              <span>A little less waste. A lot more possibility.</span>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="A refurbished laptop ready for a new owner">
+            <div class="hero-photo">
+              <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Laptop ready for a second life" fetchpriority="high">
+            </div>
+            <div class="float-card float-top"><span class="float-icon">♻️</span><span><strong>Keep tech in use</strong><small>Reuse first, recycle right</small></span></div>
+            <div class="float-card float-bottom"><span class="float-icon">🌱</span><span><strong>Every item adds up</strong><small>Small actions, real impact</small></span></div>
+          </div>
+        </div>
+        <div class="impact-strip" aria-label="E-Cycle Connect impact">
+          <div class="impact-item"><strong id="impactItems">1,284</strong><span>items given a next step</span></div>
+          <div class="impact-item"><strong>68%</strong><span>reused or repaired</span></div>
+          <div class="impact-item"><strong>12</strong><span>local collection partners</span></div>
+          <div class="impact-item"><strong>100%</strong><span>responsibly handled</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how-section" id="about">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><span class="eyebrow">Simple from start to finish</span><h2>Your old tech, a brighter next chapter.</h2></div>
+          <p>Every item gets a tracked journey. We find the best next step before anything is recycled.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card"><span class="step-number">01 / COLLECT</span><span class="step-icon">📦</span><h3>Book a pickup</h3><p>Tell us what you have and choose a collection option.</p></article>
+          <article class="step-card"><span class="step-number">02 / INSPECT</span><span class="step-icon">🔍</span><h3>We check it over</h3><p>Our team assesses condition, safety, and repairability.</p></article>
+          <article class="step-card"><span class="step-number">03 / SEPARATE</span><span class="step-icon">🧰</span><h3>Find the right path</h3><p>Reuse, repair, parts recovery, or responsible recycling.</p></article>
+          <article class="step-card"><span class="step-number">04 / REHOME</span><span class="step-icon">💻</span><h3>Give it another life</h3><p>Working tech and tested components find a new home.</p></article>
+          <article class="step-card"><span class="step-number">05 / REWARD</span><span class="step-icon">✨</span><h3>Get rewarded</h3><p>Earn points for eligible electronics you pass along.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booking-section" id="book">
+      <div class="wrap booking-layout">
+        <div class="booking-intro">
+          <span class="eyebrow">A few details, then we're on our way</span>
+          <h2>Make room for something better.</h2>
+          <p>Book a free collection in just a minute. We’ll confirm your request and give your item a unique tracking ID.</p>
+          <div class="booking-benefit"><span class="check">✓</span><span>Free doorstep pickup or convenient drop-off</span></div>
+          <div class="booking-benefit"><span class="check">✓</span><span>Follow every step of your item's journey</span></div>
+          <div class="booking-benefit"><span class="check">✓</span><span>Earn rewards for eligible items</span></div>
+        </div>
+        <form class="form-card" id="bookingForm">
+          <h3>Book your e-waste pickup</h3>
+          <p class="form-subtitle">We'll only use these details to arrange your collection.</p>
+          <div class="auth-required" id="bookingAuthPrompt">Please <button type="button" class="open-auth">sign in as a customer</button> before booking a pickup.</div>
+          <div class="form-grid">
+            <div class="field"><label for="customerName">Your name *</label><input id="customerName" name="name" autocomplete="name" placeholder="e.g. Alex Green" required></div>
+            <div class="field"><label for="customerPhone">Mobile number *</label><input id="customerPhone" name="phone" type="tel" autocomplete="tel" placeholder="+91 98765 43210" required></div>
+            <div class="field"><label for="customerEmail">Email address</label><input id="customerEmail" name="email" type="email" autocomplete="email" placeholder="alex@example.com"></div>
+            <div class="field"><label for="pickupDate">Preferred date *</label><input id="pickupDate" name="date" type="date" required></div>
+            <div class="field full"><label for="customerAddress">Pickup address *</label><input id="customerAddress" name="address" autocomplete="street-address" placeholder="Street, area, city, PIN code" required></div>
+            <div class="field full">
+              <label>What would you like to pass on? *</label>
+              <div class="category-grid" id="categoryGrid">
+                <button class="category-option" type="button" data-category="Mobile phone"><span>📱</span>Mobile phones</button>
+                <button class="category-option" type="button" data-category="Laptop or computer"><span>💻</span>Laptops & computers</button>
+                <button class="category-option" type="button" data-category="Charger or cables"><span>🔌</span>Chargers & cables</button>
+                <button class="category-option" type="button" data-category="Battery"><span>🔋</span>Batteries</button>
+                <button class="category-option" type="button" data-category="Keyboard or accessories"><span>⌨️</span>Keyboards & accessories</button>
+                <button class="category-option" type="button" data-category="Other electronics"><span>📺</span>Other electronics</button>
+              </div>
+              <input id="selectedCategory" name="category" type="hidden">
+            </div>
+            <div class="field"><label for="itemCondition">Item condition</label><select id="itemCondition" name="condition"><option>Working</option><option>Needs repair</option><option>Not working</option><option>Not sure</option></select></div>
+            <div class="field"><label for="pickupType">Collection option</label><select id="pickupType" name="pickupType"><option>Doorstep pickup</option><option>Collection centre drop-off</option></select></div>
+            <div class="field full"><label for="itemDetails">Anything else we should know? <span style="font-weight:400">(optional)</span></label><textarea id="itemDetails" name="details" placeholder="Number of items, product model, or pickup notes"></textarea></div>
+          </div>
+          <button class="btn form-submit" type="submit">Confirm my collection <span class="arrow">→</span></button>
+          <div class="form-message" id="bookingMessage" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="track">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><span class="eyebrow">Know where it goes</span><h2>One item. A whole journey.</h2></div>
+          <p>From the moment you book to its final destination, your tracking ID keeps you in the loop.</p>
+        </div>
+        <div class="track-card">
+          <div class="track-search">
+            <span class="eyebrow">Journey tracker</span>
+            <h3>Follow your item</h3>
+            <p>Enter the tracking ID from your collection confirmation to see its latest status.</p>
+            <form class="search-row" id="trackingForm">
+              <input id="trackingInput" aria-label="Tracking ID" placeholder="e.g. EC-4F82A1" autocomplete="off">
+              <button class="btn" type="submit">Track</button>
+            </form>
+            <div class="track-error" id="trackingError" role="status" aria-live="polite"></div>
+          </div>
+          <div class="journey-panel">
+            <div class="journey-placeholder" id="journeyPlaceholder"><span>🧭</span><p>Your item's journey will appear here.</p></div>
+            <div class="journey-result" id="journeyResult">
+              <div class="journey-top"><div><h3 id="journeyItem">E-waste collection</h3><p id="journeyMeta"></p></div><span class="tracking-code" id="journeyCode"></span></div>
+              <div class="timeline" id="timeline"></div>
+              <div class="journey-outcome" id="journeyOutcome"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section market-section" id="marketplace">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><span class="eyebrow">Pre-loved. Properly tested.</span><h2>Meet your next favourite.</h2></div>
+          <p>Thoughtfully refurbished devices and tested components, ready to keep doing good things.</p>
+        </div>
+        <div class="filter-row" aria-label="Filter marketplace items">
+          <button class="filter-btn active" type="button" data-filter="all">Everything</button>
+          <button class="filter-btn" type="button" data-filter="laptop">Laptops</button>
+          <button class="filter-btn" type="button" data-filter="phone">Phones</button>
+          <button class="filter-btn" type="button" data-filter="component">Components</button>
+        </div>
+        <div class="product-grid">
+          <article class="product-card" data-type="laptop">
+            <div class="product-photo"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&amp;fit=crop&amp;w=650&amp;q=80" alt="Refurbished silver laptop" loading="lazy"><span class="condition-tag">Grade A · Tested</span></div>
+            <div class="product-info"><h3>Everyday Laptop 14"</h3><p>8 GB RAM · 256 GB SSD · 6-month warranty</p><div class="product-bottom"><span class="product-price">₹24,999</span><button class="btn btn-small product-buy" type="button" data-product="Everyday Laptop 14&quot;">Enquire ↗</button></div></div>
+          </article>
+          <article class="product-card" data-type="phone">
+            <div class="product-photo"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&amp;fit=crop&amp;w=650&amp;q=80" alt="Refurbished smartphone" loading="lazy"><span class="condition-tag">Grade A · Tested</span></div>
+            <div class="product-info"><h3>Smartphone 128 GB</h3><p>Excellent condition · Battery health 90%+</p><div class="product-bottom"><span class="product-price">₹12,499</span><button class="btn btn-small product-buy" type="button" data-product="Smartphone 128 GB">Enquire ↗</button></div></div>
+          </article>
+          <article class="product-card" data-type="component">
+            <div class="product-photo"><img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&amp;fit=crop&amp;w=650&amp;q=80" alt="Tested keyboard component" loading="lazy"><span class="condition-tag">Tested · Great</span></div>
+            <div class="product-info"><h3>Mechanical Keyboard</h3><p>Cleaned & tested · USB-C cable included</p><div class="product-bottom"><span class="product-price">₹1,499</span><button class="btn btn-small product-buy" type="button" data-product="Mechanical Keyboard">Enquire ↗</button></div></div>
+          </article>
+          <article class="product-card" data-type="component">
+            <div class="product-photo"><img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&amp;fit=crop&amp;w=650&amp;q=80" alt="Recovered memory and computer components" loading="lazy"><span class="condition-tag">Recovered · Tested</span></div>
+            <div class="product-info"><h3>8 GB DDR4 RAM</h3><p>Recovered & verified · Compatible with most PCs</p><div class="product-bottom"><span class="product-price">₹899</span><button class="btn btn-small product-buy" type="button" data-product="8 GB DDR4 RAM">Enquire ↗</button></div></div>
+          </article>
+        </div>
+        <p class="market-note">Prototype catalogue for demonstration. Product availability, pricing, warranty, and enquiries should be confirmed before purchase.</p>
+      </div>
+    </section>
+
+    <section class="section operations-section" id="operations">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><span class="eyebrow">Responsible at every stage</span><h2>The right outcome, every time.</h2></div>
+          <p>Items are inspected and separated so repairable devices and useful parts stay in circulation.</p>
+        </div>
+        <div class="ops-grid">
+          <article class="ops-card admin-only" id="adminOperations">
+            <h3>Inspection & separation</h3>
+            <p>Demo operations panel: update a booked item to show its inspection result and next step in the tracking journey.</p>
+            <div class="request-list" id="requestList"><div class="empty-ops">New pickup requests will appear here after you book a collection.</div></div>
+          </article>
+          <article class="ops-card">
+            <h3>Authorized recycling partners</h3>
+            <p>Items that cannot be reused or repaired are directed to authorized recycling partners for responsible processing.</p>
+            <div class="recycle-points">
+              <div class="recycle-point"><span>🔎</span><strong>Assessed with care</strong><small>Every item is checked before a recycling decision.</small></div>
+              <div class="recycle-point"><span>🧩</span><strong>Parts recovered</strong><small>Reusable components are tested for a second life.</small></div>
+              <div class="recycle-point"><span>♻️</span><strong>Properly processed</strong><small>Unusable materials go to authorized recyclers.</small></div>
+              <div class="recycle-point"><span>🧾</span><strong>Outcome recorded</strong><small>Final destination is included in the item journey.</small></div>
+            </div>
+            <div class="partner-box"><span>🌍</span><div><strong>Partner directory · Demo</strong><p>Recycler details and certificates should be verified and entered by your operations team before live use.</p></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="rewards">
+      <div class="wrap">
+        <div class="rewards-card">
+          <div class="rewards-copy">
+            <span class="eyebrow">A little thank-you for doing good</span>
+            <h2>Pass it on. Pick up points.</h2>
+            <p>Eligible electronics earn reward points when their tracked journey is completed. Save them for discounts on refurbished finds and partner services.</p>
+            <div class="reward-rules"><span class="reward-pill">📱 Phone · 100 points</span><span class="reward-pill">💻 Laptop · 200 points</span><span class="reward-pill">🔌 Accessories · 50 points</span></div>
+          </div>
+          <div class="reward-balance">
+            <div class="reward-circle"><strong id="rewardPoints">0</strong><span>eco points</span></div>
+            <p>Points from eligible completed bookings</p>
+            <a class="btn btn-light btn-small" href="#marketplace">Explore the marketplace <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feedback-section" id="contact">
+      <div class="wrap feedback-grid">
+        <div>
+          <span class="eyebrow">We're here to help</span>
+          <h2 style="margin:13px 0 12px;font:800 clamp(33px,4vw,45px)/1.12 Manrope,sans-serif;letter-spacing:-.06em">Have a question or idea?</h2>
+          <p style="max-width:390px;margin:0;color:var(--muted);line-height:1.8">We'd love to hear from you. Share feedback, ask about a collection, or tell us how we can do better.</p>
+          <div class="contact-details">
+            <div class="contact-line"><span>✉️</span><span>hello@ecycleconnect.demo</span></div>
+            <div class="contact-line"><span>📞</span><span>+91 80000 12345 · Mon–Sat</span></div>
+            <div class="contact-line"><span>📍</span><span>Serving your neighbourhood</span></div>
+          </div>
+        </div>
+        <form class="feedback-card" id="feedbackForm">
+          <h3>Send us a note</h3>
+          <div class="feedback-form">
+            <div class="field"><label for="feedbackName">Your name</label><input id="feedbackName" name="name" placeholder="Your name" required></div>
+            <div class="field"><label for="feedbackEmail">Email address</label><input id="feedbackEmail" name="email" type="email" placeholder="you@example.com" required></div>
+            <div class="field full"><label for="feedbackType">What's this about?</label><select id="feedbackType"><option>Feedback or suggestion</option><option>Report an issue</option><option>Pickup question</option><option>Marketplace enquiry</option></select></div>
+            <div class="field full"><label for="feedbackMessage">Your message</label><textarea id="feedbackMessage" placeholder="Tell us what's on your mind..." required></textarea></div>
+            <button class="btn" type="submit">Send message <span class="arrow">→</span></button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a class="brand" href="#home"><span class="brand-mark">↻</span><span>E-Cycle <em>Connect</em></span></a>
+      <p>Collect · Inspect · Separate · Reuse · Recycle · Reward</p>
+      <div class="footer-links"><a href="#about">Our process</a><a href="#book">Book a pickup</a><a href="#track">Track an item</a></div>
+      <p>© <span id="currentYear"></span> E-Cycle Connect · Prototype demo</p>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
